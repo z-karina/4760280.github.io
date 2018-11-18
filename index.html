@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Test</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans:700" rel="stylesheet">
+</head>
+<body>
+    <div class="wrapper">
+
+        <div class="employee">
+            <div class="employee-cont">
+                <h1 class="employee__name">Вероника Ростова</h1>
+                <p class="employee__specialty">Менеджер по продажам</p>
+                <img class="employee__photo" src="img/photo.png" alt="">
+                <div class="employee__proposal">Подберу для вас самые лучшие предложения.<br>Мои услуги абсолютно бесплатны</div>
+
+                <div class="employee__profit">
+                    <table class="table">
+
+                        <thead class="table__header">
+                        <tr class="table__row table__row_header">
+                            <th class="table__cell table__cell_header"></th>
+                            <th class="table__cell table__cell_header">Услуг</th>
+                        </tr>
+                        </thead>
+
+                        <tbody class="table__body">
+                        <tr class="table__row table__row_body">
+                            <td class="table__cell table__cell_body table__cell_body_booking">Ручное бронирование</td>
+                            <td class="table__cell table__cell_body">11</td>
+                        </tr>
+                        <tr class="table__row table__row_body">
+                            <td class="table__cell table__cell_body table__cell_body_tour">Пакетные туры</td>
+                            <td class="table__cell table__cell_body">3</td>
+                        </tr>
+                        <tr class="table__row table__row_body">
+                            <td class="table__cell table__cell_body table__cell_body_hotel">Отели</td>
+                            <td class="table__cell table__cell_body">1</td>
+                        </tr>
+                        </tbody>
+
+                        <tfoot class="table__footer">
+                        <tr class="table__row table__row_footer">
+                            <td class="table__cell table__cell_footer">Всего</td>
+                            <td class="table__cell table__cell_footer">15</td>
+                        </tr>
+                        </tfoot>
+
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <div class="reviews">
+            <div class="reviews-cont">
+
+                <div class="reviews__descriptions">
+                    <div class="reviews__descriptions_wrap">
+                        <h2 class="reviews__title">Последние отзывы</h2>
+                        <a href="#" class="reviews__link">Все отзывы</a>
+                    </div>
+                    <div class="reviews__icons">
+                        <a href="#" class="reviews__icons_sum-likes">131</a>
+                        <a href="#" class="reviews__icons_sum-comments">14</a>
+                    </div>
+                </div>
+
+                <ul class="reviews__comment" id="reviews__comment">
+                    <li class="comment__item">
+                        <h3 class="comment__author">Самуил</h3>
+                        <span class="comment__date">13 октября 2011</span>
+                        <div class="comment__text">Привет, Верунь! ниче себе ты крутая. фотка класс!!!!</div>
+                    </li>
+                    <li class="comment__item">
+                        <h3 class="comment__author">Лилия Семёновна</h3>
+                        <span class="comment__date">14 октября 2011</span>
+                        <div class="comment__text">Вероника, здравствуйте! Есть такой вопрос: Особый вид куниц жизненно стабилизирует кинетический момент,
+                            это и есть всемирно известный центр огранки алмазов и торговли бриллиантами?
+                        </div>
+                    </li>
+                    <li class="comment__item">
+                        <h3 class="comment__author">Лилия Семёновна</h3>
+                        <span class="comment__date">14 октября 2011</span>
+                        <div class="comment__text">Вероника, здравствуйте! Есть такой вопрос: Особый вид куниц жизненно стабилизирует кинетический
+                            момент?
+                        </div>
+                    </li>
+                </ul>
+
+            </div>
+        </div>
+
+        <form class="form-comment"  action="#" method="post">
+            <textarea class="form-comment__input" name="comment" id="comment" required></textarea>
+            <button class="form-comment__button" type="button" onclick="commentSend()">Написать консультанту</button>
+        </form>
+
+    </div>
+    <script>
+        function commentSend() {
+            var element = document.getElementById('reviews__comment');
+            var li = document.createElement('li');
+            var h3 = document.createElement('h3');
+            var span = document.createElement('span');
+            var div = document.createElement('div');
+
+            li.className = "comment__item";
+            h3.className = "comment__author";
+            span.className = "comment__date";
+            div.className = "comment__text";
+
+            h3.innerHTML = 'Мария';
+            span.innerHTML = new Date().toLocaleDateString('ru', {
+                day : 'numeric',
+                month : 'long',
+                year : 'numeric'
+            }).slice(0, -2);
+            div.innerHTML = document.getElementById("comment").value;
+
+            element.appendChild(h3);
+            element.appendChild(span);
+            element.appendChild(div);
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,330 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre, a,
+abbr, acronym, address, big, cite, code, del,
+dfn, em, img, ins, kbd, q, s, samp, small, strike,
+strong, sub, sup, tt, var, b, u, i, center, dl, dt,
+dd, ol, ul, li, fieldset, form, label, legend, table,
+caption, tbody, tfoot, thead, tr, th, td, article, aside,
+canvas, details, embed, figure, figcaption, footer, header,
+hgroup, menu, nav, output, ruby, section, summary, time,
+mark, audio, video {
+    margin: 0;
+    padding: 0;
+    vertical-align: baseline;
+    outline: none;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    position: relative;
+}
+
+html { height: 100%;}
+
+body {
+    background-color: #f2fbff;
+    font: .875em "Arial", sans-serif;
+    color: #333;
+}
+
+ul { list-style: none; }
+
+img { border: 0; max-width: 100%; }
+
+.wrapper {
+    max-width: 720px;
+    min-width: 360px;
+    margin: 0 auto;
+    background-color: #fff;
+}
+
+/*===== EMPLOYEE =====*/
+.employee {
+    margin-left: 26.7%;
+}
+
+.employee-cont,
+.reviews-cont{
+    padding: 1.56em 1.5em 0;
+}
+
+.employee__photo {
+    position: absolute;
+    top: 1.2em;
+    left: -7.5em;
+    z-index: 1;
+}
+
+.employee__proposal {
+    background-color: #fffbc8;
+    border: 1px solid #cecabf;
+    border-radius: .5em;
+    padding: .875em .625em .75em 6.5em;
+    margin-left: -6.4em;
+    margin-top: .6em;
+    margin-bottom: .5em;
+}
+
+h1 {
+    font-size: 1.14em;
+    font-weight: bold;
+    margin-bottom: .31em;
+}
+p {
+    font-size: .75em;
+    color: #808080;
+}
+
+.table {
+    width: 100%;
+    font-size: .92em;
+    border-collapse: collapse;
+}
+
+.table__header,
+.table__body {
+    border-bottom: 1px solid #ccc;
+}
+
+.table__cell_header {
+    font-weight: normal;
+    padding: .5em 1.3em;
+}
+
+.table__cell_body_booking {
+    padding: 1.43em 0 0 .71em;
+}
+
+.table__cell_body_tour {
+    padding: .86em 0 0 .71em;
+}
+
+.table__cell_body_hotel {
+    padding: .86em 0 1.7em .71em;
+}
+
+.table__cell_body {
+    z-index: 1;
+}
+
+.table__cell_body:nth-child(2),
+.table__cell_footer:nth-child(2) {
+    text-align: center;
+    font-weight: bold;
+}
+
+.table__cell_body:before {
+    content: "";
+    position: absolute;
+    height: 1.75em;
+    left: .14em;
+    top: 1.2em;
+    border-radius: 0 .21em .21em 0;
+    z-index: -1;
+}
+.table__cell_body_booking:before {
+    background-color: #b1e19b;
+    width: 100%;
+}
+
+.table__cell_body_tour:before {
+    background-color: #ace2f8;
+    width: 25%;
+    top: .7em;
+}
+
+.table__cell_body_hotel:before {
+    background-color: #ace2f8;
+    width: 17%;
+    top: .7em;
+}
+
+.table__body:before {
+    content: "";
+    position: absolute;
+    width: .07em;
+    height: 45%;
+    background-color: #b2b2b2;
+    z-index: 2;
+    top: 3.4em;
+    left: .14em;
+}
+
+.table__cell_footer {
+    padding-top: .86em;
+    font-size: 1.24em;
+    font-weight: bold;
+}
+/*===== END EMPLOYEE =====*/
+
+/*===== REVIEWS =====*/
+.reviews-cont {
+    padding-top: .3em;
+}
+
+.reviews__descriptions {
+    margin: 1.43em 0 .8em;
+    display: flex;
+    justify-content: space-between;
+}
+
+.reviews__title {
+    display: inline-block;
+    font-size: 1.14em;
+    font-weight: bold;
+    margin-right: .71em;
+}
+
+.reviews__link {
+    color: #005da1;
+}
+
+.reviews__icons_sum-likes,
+.reviews__icons_sum-comments {
+    color: #333;
+    font-size: .86em;
+    text-decoration: none;
+    margin-left: 2.86em;
+}
+
+.reviews__icons_sum-likes {
+    margin-left: 0;
+}
+
+.reviews__icons_sum-likes:before,
+.reviews__icons_sum-comments:before {
+    content: "";
+    position: absolute;
+    display: inline-block;
+    background: url("../img/sprite.png") no-repeat;
+    width: 15px;
+    height: 15px;
+}
+
+.reviews__icons_sum-likes:before {
+    background-position: 0 3px;
+    left: -1.3em;
+}
+
+.reviews__icons_sum-comments:before {
+    background-position: -22px 1px;
+    left: -1.4em;
+    top: .07em;
+}
+
+.comment__author {
+    font-weight: bold;
+    font-size: 1em;
+    display: inline-block;
+    margin-right: 5px;
+}
+
+.comment__date {
+    font-size: .78em;
+    color: #808080;
+}
+
+.comment__text {
+    border: 1px solid #cfcfcf;
+    background-color: #f2fbff;
+    padding: .9em 1.43em 1em;
+    margin: 1.3em 0 1.5em;
+    box-shadow: 0 0.14em 0.36em rgba(0, 0, 0, .05);
+    line-height: 1.5;
+}
+
+.comment__text:before, .comment__text:after {
+    content: '';
+    position: absolute;
+    left: 2em;
+    top: -1em;
+    border: solid transparent;
+    width: 0;
+    margin-left: -.5em;
+}
+
+.comment__text:before {
+    border-bottom-color: #cfcfcf;
+    border-width: 7px;
+    border-left-color: #cfcfcf;
+}
+
+.comment__text:after {
+    border-bottom-color: #f2fbff;
+    border-width: 6px;
+    margin-left: -6px;
+    border-left-color: #f2fbff;
+    margin-top: 2px;
+}
+/*===== END REVIEWS =====*/
+
+/*===== FORM =====*/
+.form-comment {
+    background: #f2f2f2;
+    padding: 2.14em 1.43em;
+}
+
+.form-comment__input {
+    height: 5.5em;
+    background-color: #fff;
+    color: #333;
+    font-size: 1em;
+    line-height: 1.5;
+    text-indent: .71em;
+    width: 100%;
+    border: 1px solid #a9a9a9;
+    margin-bottom: 1.7em;
+    padding: .71em 0;
+    resize: none;
+    outline: none;
+    -moz-appearance: none;
+}
+
+.form-comment__button {
+    background-color: #fdd639;
+    margin: 0 auto;
+    display: block;
+    border: none;
+    padding: .76em 3em;
+    border-radius: 3.57em;
+    font-size: 1.14em;
+    font-family: 'PT Sans', sans-serif;
+    font-weight: bold;
+    outline: none;
+    cursor: pointer;
+}
+/*===== END FORM =====*/
+
+/*===== MEDIA =====*/
+@media(max-width: 400px) {
+
+    .employee__proposal {
+        font-size: .9em;
+    }
+
+    .employee__photo {
+        width: 40%;
+        left: -6.8em;
+        top: 2em;
+    }
+
+    .reviews__title {
+        margin-right: .2em;
+    }
+
+    .reviews__icons_sum-comments {
+        margin-left: 1em;
+    }
+
+}
+/*===== END MEDIA =====*/
+
+/*===== FOR FIREFOX =====*/
+@-moz-document url-prefix() {
+
+    .table__body::before {
+        height: 69%;
+        top: 16px;
+    }
+}
+
+
